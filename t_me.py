@@ -17,10 +17,10 @@ def horarios(update: Update, context: CallbackContext):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Os Horários estão no site do curso digite /site para ver qual é o site.")
 
 def comandos(update: Update, context: CallbackContext):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Os comando são: /start /site /horarios /sugestao /python")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Os comandos são: /start /site /horarios /sugestao /python")
 
 def site(update: Update, context: CallbackContext):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Site = si.plc.ifmt.br")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Site = si.plc.ifmt.edu.br")
 
 def sugestao(update: Update, context: CallbackContext):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Envie sua sugestão para o nerd master @wilsntn ele ficará muito feliz em implementar!")
