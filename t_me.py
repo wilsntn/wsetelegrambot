@@ -36,7 +36,7 @@ comandos_handler = CommandHandler('comandos', comandos)
 dispatcher.add_handler(comandos_handler)
 
 python_handler = CommandHandler('python', python)
-dispatcher.add_handler(start_handler)
+dispatcher.add_handler(python_handler)
 
 sugestao_handler = CommandHandler('sugestao', sugestao)
 dispatcher.add_handler(sugestao_handler)
