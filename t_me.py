@@ -22,8 +22,14 @@ def site(update: Update, context: CallbackContext):
 def sugestao(update: Update, context: CallbackContext):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Envie sua sugestão para o nerd master @wilsntn ele ficará muito feliz em implementar!")
 
-#função para que toda vez que for enviado um /start o bot captura
+def python(update: Update, context: CallbackContext):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Python é a melhor linguagem de programação! Sabe por que? Porque eu fui feito em Python e eu sou o melhor!")
+
+#função para que toda vez que for enviado um comando apos a / o bot captura
 start_handler = CommandHandler('start', start)
+dispatcher.add_handler(start_handler)
+
+python_handler = CommandHandler('python', python)
 dispatcher.add_handler(start_handler)
 
 sugestao_handler = CommandHandler('sugestao', sugestao)
