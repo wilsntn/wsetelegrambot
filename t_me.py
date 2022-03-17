@@ -11,10 +11,13 @@ dispatcher = updater.dispatcher
 
 #receptores "comandos aceitos"
 def start(update: Update, context: CallbackContext):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="Eai Nerd!")
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Eai Nerd! digite /comandos para ver o que eu posso fazer.")
 
 def horarios(update: Update, context: CallbackContext):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Os Horários estão no site do curso digite /site para ver qual é o site.")
+
+def comandos(update: Update, context: CallbackContext):
+    context.bot.send_message(chat_id=update.effective_chat.id, text="Os comando são: /start /site /horarios /sugestao /python")
 
 def site(update: Update, context: CallbackContext):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Site = si.plc.ifmt.br")
@@ -28,6 +31,9 @@ def python(update: Update, context: CallbackContext):
 #função para que toda vez que for enviado um comando apos a / o bot captura
 start_handler = CommandHandler('start', start)
 dispatcher.add_handler(start_handler)
+
+comandos_handler = CommandHandler('comandos', comandos)
+dispatcher.add_handler(comandos_handler)
 
 python_handler = CommandHandler('python', python)
 dispatcher.add_handler(start_handler)
